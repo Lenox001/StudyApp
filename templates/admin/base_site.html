@@ -1,0 +1,21 @@
+{% extends "admin/base_site.html" %}
+
+{% load static %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <!-- Bootstrap CSS for responsive design -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom Admin Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/custom_admin.css' %}">
+{% endblock %}
+
+{% block title %}
+    Admin Dashboard
+{% endblock %}
+
+{% block branding %}
+    <h1 id="admin-title">StudyBuddy Admin Dashboard</h1>
+{% endblock %}

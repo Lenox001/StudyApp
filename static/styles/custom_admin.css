@@ -1,0 +1,160 @@
+/* Custom styles for the Django admin */
+
+/* Change background color of the entire admin page */
+body {
+    background-color: #242629; /* Dark gray background */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Change the header color */
+.header {
+    background-color: #4CAF50; /* Green background for the header */
+    color: rgba(255, 255, 255, 0.9); /* More opaque white text color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    padding: 15px; /* Padding for header */
+    position: relative; /* Positioning for icon */
+}
+
+/* Add animation to the header */
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    animation: shimmer 2s infinite;
+    z-index: 0;
+}
+
+/* Keyframes for shimmer effect */
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+.header h1 {
+    position: relative;
+    z-index: 1; /* Bring text above shimmer */
+}
+
+/* Customize the dashboard font */
+.dashboard {
+    font-family: 'Roboto', sans-serif; /* Change the font */
+}
+
+/* Change the color of links */
+a {
+    color: #4CAF50; /* Change link color to green */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+/* Customize buttons */
+button {
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Add hover effects for buttons */
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Style form elements */
+form {
+    background-color: rgb(97, 61, 61); /* Dark background for forms */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    padding: 20px; /* Add padding to form */
+}
+
+/* Customize input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Padding inside inputs */
+    width: 100%; /* Full width */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Change border color on focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Change color of error messages */
+.errornote {
+    color: #d9534f; /* Bootstrap danger color for error messages */
+}
+
+/* Add some spacing for lists */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    margin: 10px 0; /* Spacing between list items */
+    padding: 10px; /* Padding inside list items */
+    background: #f1f1f1; /* Light background for list items */
+    border-radius: 10px; /* Rounded corners */
+    transition: background 0.3s ease; /* Add transition */
+}
+
+/* Change list item background on hover */
+li:hover {
+    background: #e1e1e1; /* Slightly darker on hover */
+}
+
+/* Add icon styles */
+.fa {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Add animations for loading items */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px; /* Adjust header padding */
+    }
+
+    button {
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    form {
+        padding: 15px; /* Adjust form padding */
+    }
+}
